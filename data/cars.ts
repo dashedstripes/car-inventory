@@ -14,7 +14,7 @@ export const cars: Car[] = [
     make: 'Toyota',
     model: 'Camry',
     description: 'A car that is made by Toyota',
-    imgSrc: 'car-1.jpg'
+    imgSrc: 'toyota.jpg'
   },
   {
     id: 2,
@@ -22,7 +22,7 @@ export const cars: Car[] = [
     make: 'Honda',
     model: 'Civic',
     description: 'A car that is made by Honda',
-    imgSrc: 'car-1.jpg'
+    imgSrc: 'honda.jpg'
   },
   {
     id: 3,
@@ -30,6 +30,6 @@ export const cars: Car[] = [
     make: 'Ford',
     model: 'F150',
     description: 'A car that is made by Ford',
-    imgSrc: 'car-1.jpg'
+    imgSrc: 'ford.jpg'
   }
 ]
