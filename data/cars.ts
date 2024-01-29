@@ -1,6 +1,4 @@
-import { NextRequest } from "next/server";
-
-interface Car {
+export interface Car {
   id: number;
   slug: string;
   make: String;
@@ -8,7 +6,7 @@ interface Car {
   description: String;
 }
 
-const data: Car[] = [
+export const cars: Car[] = [
   {
     id: 1,
     slug: 'toyota-camry',
@@ -31,14 +29,3 @@ const data: Car[] = [
     description: 'A car that is made by Ford'
   }
 ]
-
-export async function GET(request: NextRequest) {
-  const slug = request.nextUrl.searchParams.get('slug');
-
-  if(slug) {
-    const car = data.find(car => car.slug === slug)
-    return Response.json({ data: car })
-  }
-
-  return Response.json({ data })
-}

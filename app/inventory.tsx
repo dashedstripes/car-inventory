@@ -1,10 +1,9 @@
+import { cars } from "@/data/cars";
 import Link from "next/link";
 
 export default async function Inventory() {
-  const res = await fetch(`${process.env.BASE_URL}/api/inventory`);
-  const json = await res.json();
-  const data = json.data;
-
+  const data = cars;
+  
   return (
     <div className="grid md:grid-cols-3 gap-8">
       {data.map((car: any) => (

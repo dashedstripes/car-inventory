@@ -1,7 +1,12 @@
+import { cars, Car } from '../../../data/cars';
+
 export default async function Car({ params }: { params: { slug: string }}) {
-  const res = await fetch(`${process.env.BASE_URL}/api/inventory?slug=${params.slug}`);
-  const json = await res.json();
-  const data = json.data;
+
+  const data: Car | undefined = cars.find(car => car.slug === params.slug);
+
+  if(!data) {
+    return <div>Sorry, no car found for {params.slug}</div>
+  }
 
   return (
     <div className="container mx-auto">
